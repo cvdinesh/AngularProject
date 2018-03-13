@@ -1,0 +1,167 @@
+<div ng-controller="employee25detailsCtrl">
+<fieldset>
+<h1 align="center"><b>FORM NO. XXVI</b></h1>
+<h5 align="center">/See Rule 75 of Tamil Nadu contract Labour(Regulation and Abolition) Rules,1975</h5>
+<h2 align="center"><b>REGISTER OF EMPLOYMENT OF CONTRACT LABOUR</b></h2>
+<div>
+		 <div>
+			<table width="70%" cellpadding="2" cellspacing="2" border="0">				
+				<tr>
+				<td width="35%">Name and Address of the Principle Employer: </td><td>{{employeesResult[0].principleEmployer}}</td><td width="10%">Month:</td><td>{{employeesResult[0].month}}</td><br/>
+				</tr>
+				<tr>						
+				<td width="35%">Name and Address of the Contractor:</td><td>{{employeesResult[0].contractor}}</td><td width="10%">Year:</td><td>{{employeesResult[0].year}}</td><br/>
+				</tr>
+				<tr>
+				<td width="35%">Name and Location of the work site:</td><td>{{employeesResult[0].location}}</td><br/>
+				</tr>												
+			</table>
+		 </div>
+		 <div>
+		 &nbsp;&nbsp;
+		 </div>
+			<table cellpadding="2" cellspacing="2" border="1">
+				
+					<col>
+	  				<colgroup span="31"></colgroup>
+  						
+					<tr>
+					    <!-- <th>SL No.</th>
+					    <th>Name of the Workman</th>
+					    <th>Age and Sex</th>											
+						<th>Permanent Home Address</th>
+						<th>Local Address</th>
+						<th>Designation(Nature of Work)</th>
+						<th>Father's/Husband's Name</th>
+						<th>Date of Entry into Service</th>	
+						<th>Rates of Wages</th> 					 
+						<th></th>
+						<th colspan="31" style="text-decoration:underline;text-align:center">Daily Hours of Work Done <br/>(10)</th>												
+						<th>Number of days worked</th>
+						<th>Signature of workman</th>
+						<th>Date of termination of employment</th>
+						<th>Signature of contractor/Representative</th> -->
+						<td rowspan="2">SL No.</td>
+					    <td rowspan="2">Name of the Workman</td>
+					    <td rowspan="2">Age and Sex</td>											
+						<td rowspan="2">Permanent Home Address</td>
+						<td rowspan="2">Local Address</td>
+						<td rowspan="2">Designation(Nature of Work)</td>
+						<td rowspan="2">Father's/Husband's Name</td>
+						<td rowspan="2">Date of Entry into Service</td>	
+						<td rowspan="2">Rates of Wages</td>
+						<th colspan="31" style="text-align:center">Daily Hours of Work Done<br>(10)</th>												
+						<td rowspan="2">Number of days worked</td>
+						<td rowspan="2">Signature of workman</td>
+						<td rowspan="2">Date of termination of employment</td>
+						<td rowspan="2">Signature of contractor/Representative</td> 
+					</tr>
+					<tr>
+					</tr>				
+					<tr>
+						<th>(1)</th>
+						<th>(2)</th>
+						<th>(3)</th>
+						<th>(4)</th>
+						<th>(5)</th>
+						<th>(6)</th>
+						<th>(7)</th>
+						<th>(8)</th>
+						<th>(9)</th>								
+						<th scope="col">1</th>
+					    <th scope="col">2</th>
+					    <th scope="col">3</th>
+					    <th scope="col">4</th>
+					    <th scope="col">5</th>
+					    <th scope="col">6</th>
+					    <th scope="col">7</th>
+					    <th scope="col">8</th>
+					    <th scope="col">9</th>
+					    <th scope="col">10</th>
+					    <th scope="col">11</th>
+					    <th scope="col">12</th>
+					    <th scope="col">13</th>
+					    <th scope="col">14</th>
+					    <th scope="col">15</th>
+					    <th scope="col">16</th>
+					    <th scope="col">17</th>
+					    <th scope="col">18</th>
+					    <th scope="col">19</th>
+					    <th scope="col">20</th>
+					    <th scope="col">21</th>
+					    <th scope="col">22</th>
+					    <th scope="col">23</th>
+					    <th scope="col">24</th>
+					    <th scope="col">25</th>
+					    <th scope="col">26</th>
+					    <th scope="col">27</th>
+					    <th scope="col">28</th>
+					    <th scope="col">29</th>
+					    <th scope="col">30</th>
+					    <th scope="col">31</th>
+					    <th>(11)</th>
+					    <th>(12)</th>
+					    <th>(13)</th>
+					    <th>(14)</th>
+					</tr>
+			 
+			 <tbody>
+				<tr ng-repeat="use in employeesResult">
+					 <td>{{use.empNo}}</td>		
+					 <td>{{use.empFName}}&nbsp;{{use.empLName}}</td>			
+					 <td>{{use.age}}&{{use.empGender}}</td>				 
+					 <td>{{use.perAddr}}</td>
+					 <td>{{use.localAddr}}</td>
+					 <td>{{use.empDesignation}}</td>
+					 <td>{{use.fatherName}}</td>
+					 <td>{{use.empDOJ}}</td>					 
+					 <td>{{use.basicSalary}}</td>
+					 <td>{{use.day1hrs}}</td>
+					 <td>{{use.day2hrs}}</td>
+					<td>{{use.day3hrs}}</td>
+					<td>{{use.day4hrs}}</td>
+					<td>{{use.day5hrs}}</td>
+					<td>{{use.day6hrs}}</td>
+					<td>{{use.day7hrs}}</td>
+					<td>{{use.day8hrs}}</td>
+					<td>{{use.day9hrs}}</td>
+					<td>{{use.day10hrs}}</td>
+					<td>{{use.day11hrs}}</td>
+					<td>{{use.day12hrs}}</td>
+					<td>{{use.day13hrs}}</td>
+					<td>{{use.day14hrs}}</td>
+					<td>{{use.day15hrs}}</td>
+					<td>{{use.day16hrs}}</td>
+					<td>{{use.day17hrs}}</td>
+					<td>{{use.day18hrs}}</td>
+					<td>{{use.day19hrs}}</td>
+					<td>{{use.day20hrs}}</td>
+					<td>{{use.day21hrs}}</td>
+					<td>{{use.day22hrs}}</td>
+					<td>{{use.day23hrs}}</td>
+					<td>{{use.day24hrs}}</td>
+					<td>{{use.day25hrs}}</td>
+					<td>{{use.day26hrs}}</td>
+					<td>{{use.day27hrs}}</td>
+					<td>{{use.day28hrs}}</td>
+					<td>{{use.day29hrs}}</td>
+					<td>{{use.day30hrs}}</td>
+					<td>{{use.day31hrs}}</td>
+					<td>{{use.empDOR}}</td>
+					<td>{{use.workdays}}</td>
+					<td>{{use.empRemarks}}</td>
+					<td>{{use.emplrRemarks}}</td> 
+				</tr>				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</fieldset>
+<div>
+<table>
+<tr>
+<tr>
+</table>
+</div>	
+	
+	

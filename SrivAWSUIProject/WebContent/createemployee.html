@@ -1,0 +1,110 @@
+<div ng-controller="createCtrl">
+<form name="empform">
+<fieldset>
+<h2>Employee Details</h1>
+	<div>
+		<table cellpadding="2" cellspacing="2" border="0">
+		<tr>
+		<td>Emp No:</td>
+		<td><input type="text" name="empNo" id="empNo" ng-model="empNo" autofocus/><br/></td> 
+		</tr>
+		<tr>
+		<td>First Name:</td>
+		<td><input type="text" name="empFName" id="empFName" ng-model="empFName"/><br/></td>
+		</tr>
+		<tr>
+		<td>Last Name:</td>
+		<td><input type="text" name="empLName" id="empLName" ng-model="empLName" /><br/></td> 
+		</tr>
+		<tr>
+		<td>DOB:</td>
+		<td><input type="text" name="empDOB" id="empDOB" ng-model="empDOB"/><br/></td>
+		</tr>
+		<tr>
+		<td>Gender:</td>
+		<td><input type="text" name="empGender" id="empGender" maxlength="1" ng-model="empGender"/><br/></td> 
+		</tr>
+		<tr>
+		<td>Age:</td>
+		<td><input type="text" name="age" id="age" maxlength="2" ng-model="age"/><br/></td> 
+		</tr>
+		<tr>
+		<td>Permanent Address:</td>
+		<td><textarea rows="5" cols="30" name="perAddr" id="perAddr" ng-model="perAddr"></textarea><!-- <input type="textarea" name="paddress" id="paddress" ng-model="paddress" /> --><br/></td> 
+		</tr>
+		<tr>
+		<td>Local Address:</td>
+		<td><textarea rows="5" cols="30" name="localAddr" id="localAddr" ng-model="localAddr"></textarea><!-- <input type="textarea" name="laddress" id="laddress" ng-model="laddress" /> --><br/></td> 
+		</tr>
+		<tr>
+		<td>Father's Name:</td>
+		<td><input type="text" name="fatherName" id="fatherName" ng-model="fatherName"/><br/></td>
+		</tr>
+		<tr>
+		<td>DOJ:</td>
+		<td><input type="text" name="empDOJ" id="empDOJ" ng-model="empDOJ"/><br/></td>
+		</tr>
+		<tr>
+		<td>Designation:</td>
+		<td><input type="text" name="empDesignation" id="empDesignation" ng-model="empDesignation"/><br/></td>
+		</tr>
+		<tr>
+		<td>Basic Salary:</td>
+		<td><input type="number" name="basicSalary" id="basicSalary" ng-model="basicSalary" /><br/></td> 
+		</tr>
+		<tr>
+		<td>HRA:</td>
+		<td><input type="number" name="empHRA" id="empHRA" ng-model="empHRA"/><br/></td>
+		</tr>
+		<tr>
+		<td>Conv. Allow:</td>
+		<td><input type="number" name="convAllow" id="convAllow" ng-model="convAllow"/><br/></td>
+		</tr>
+		<tr>
+		<td>Medical Allow:</td>
+		<td><input type="number" name="medicalAllow" id="medicalAllow" ng-model="medicalAllow"/><br/></td>
+		</tr>
+		<tr>
+		<td>Special Allow:</td>
+		<td><input type="number" name="specAllow" id="specAllow" ng-model="specAllow"/><br/></td>
+		</tr>
+		<tr>
+		<td>Phone No:</td>
+		<td><input type="text" name="phone" id="phone" ng-model="phone"/><br/></td>
+		</tr>		
+		<tr>
+		<td>DOR:</td>
+		<td><input type="text" name="empDOR" id="empDOR" ng-model="empDOR"/><br/></td>
+		</tr>		
+		<tr>
+		<td>Principle Employer Name:</td>
+		<td><input type="text" name="principleEmployer" id="principleEmployer" ng-model="principleEmployer"/><br/></td>
+		</tr>		
+		<tr>
+		<td>Contractor Name:</td>
+		<td><input type="text" name="contractor" id="contractor" ng-model="contractor"/><br/></td>
+		</tr>		
+		<tr>
+		<td>Location:</td>
+		<td><input type="text" name="location" id="location" ng-model="location"/><br/></td>
+		</tr>
+		<tr>
+		<td>Month:</td>
+		<td><input type="text" name="month" id="month" ng-model="month"/><br/></td>
+		</tr>		
+		<tr>
+		<td>Year:</td>
+		<td><input type="text" name="year" id="year" ng-model="year"/><br/></td>
+		</tr>
+		
+		<tr></tr>		
+		<tr></tr>
+		<tr>
+		<td><input type="button" ng-click="generateemployee()" value="Create Employee"/></td>
+		<!-- <td><input type="button" ng-click="generateemployee()" value="Create Employee"/> &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" ng-click="reset()" value="Reset"/><br/></td> -->
+		</tr>
+		</table>
+	</div>
+</fieldset>
+</form>
+</div>

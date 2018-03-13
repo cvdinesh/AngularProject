@@ -1,0 +1,204 @@
+<div ng-controller="employeeQdetailsCtrl">
+<div style="border:0px solid; width: 110% " >
+<table  style=" display: inline-block; border: 0px solid;" >
+<tr>
+<td>
+<h3 align="center"><b>FORM - Q</b></h3>
+<h3 align="center"><b>REGISTER OF EMPLOYMENT FOR SHOPS AND ESTABLISHMENTS</b></h3>
+<h5 align="center">(See Sub Rule (1) of Rule 16 of the <br>Tamil Nadu Shops and Establishments Rules,1948)</h5>
+</td>
+</tr>
+</table>
+<table style="display: inline-block; border: 1px solid; float: right;">
+<tr>
+<td>H - Weekly Holiday</td>
+</tr>
+<tr>
+<td>FH - Festival Holiday</td>
+</tr>
+<tr>
+<td>NH - National Holiday</td>
+</tr>
+<tr>
+<td>SH - Substitute holiday</td>
+</tr>
+</table>
+<table style="display: inline-block; border: 1px solid; float: right;">
+<tr>
+<td>CL - Casual Leave</td>
+</tr>
+<tr>
+<td>SL - Sick Leave</td>
+</tr>
+<tr>
+<td>HW - Holidays with Wages</td>
+</tr>
+<tr>
+<td>ML - Maternity Leave</td>
+</tr>
+</table>
+<table style="display: inline-block; border: 1px solid; float: right;">
+<tr>
+<td>
+The Leave to be credited to the account shall also be included<br/> in this column under the respective heads.The Holidays with Wages(Privilege leave)<br/> 
+balance at the end of the year is to be carried forward to next year.<br/>The National Holiday or approved Festival Holiday occurring in the month,<br/>
+shall be indicated on top against the respective dates.
+<br>
+</td>
+</tr>
+</table>
+</div>
+<div>
+&nbsp;&nbsp;
+</div>
+<div style="width: 100%;">
+		 <div>
+			<table width="70%" cellpadding="2" cellspacing="2" border="2">				
+				<tr>
+				<td width="35%"><b>Name and Address of the Establishment:</b> </td><td>{{employeesResult[0].principleEmployer}}</td><td width="10%"><b>Month:</b></td><td>{{employeesResult[0].month}}</td><td width="10%"><b>Year:</b></td><td>{{employeesResult[0].year}}</td><br/>
+				</tr>
+			</table>
+		 </div>
+		 <div>
+		 &nbsp;&nbsp;
+		 </div>
+		 <div>
+		 &nbsp;&nbsp;
+		 </div>
+			<table cellpadding="2" cellspacing="2" border="1">				
+  						
+					<tr>
+						<td rowspan="2"><b>Sl No.</b></td>
+					    <td rowspan="2"><b>Name of the Person Employed</b></td>
+					    <td rowspan="2"><b>Date of entry into service</b></td>
+					    <td rowspan="2"><b>Age/ Date of Birth</b></td>
+						<td rowspan="2"><b>Designation</b></td>
+						<th colspan="3" style="text-align:center"><b>Leave Credit at the Beginning of the Month</b></th>												
+						<th colspan="3" style="text-align:center"><b>Leave Availed During the Month</b></th>
+						<th colspan="3" style="text-align:center"><b>Leave Balance</b></th>
+						<td colspan="31" style="text-align:center"><b>Daily Hours of Work done including Overtime(if any)<br>(15)</b></td>
+						<td rowspan="2"><b>TOTAL Hours of Overtime worked </b></td>
+						<td rowspan="2"><b>TOTAL Hours of Work done during the Month</b></td>
+						<td rowspan="2"><b>TOTAL no. of days Maternity Leave availed</b></td>
+					</tr>
+					<tr>
+						<th scope="col">Casual Leave</th>
+					    <th scope="col">Sick Leave</th>
+					    <th scope="col">Holidays with Wages</th>
+					    <th scope="col">Casual Leave</th>
+					    <th scope="col">Sick Leave</th>					    
+					    <th scope="col">Holidays with Wages</th>
+					    <th scope="col">Casual Leave</th>
+					    <th scope="col">Sick Leave</th>					    
+					    <th scope="col">Holidays with Wages</th>
+				    </tr>					
+					<tr>
+						<th>(1)</th>
+						<th>(2)</th>
+						<th>(3)</th>
+						<th>(4)</th>
+						<th>(5)</th>
+						<th>(6)</th>
+						<th>(7)</th>
+						<th>(8)</th>
+						<th>(9)</th>
+						<th>(10)</th>		    
+					    <th>(11)</th>
+					    <th>(12)</th>
+					    <th>(13)</th>
+					    <th>(14)</th>
+					    <th scope="col">1</th>
+					    <th scope="col">2</th>
+					    <th scope="col">3</th>
+					    <th scope="col">4</th>
+					    <th scope="col">5</th>
+					    <th scope="col">6</th>
+					    <th scope="col">7</th>
+					    <th scope="col">8</th>
+					    <th scope="col">9</th>
+					    <th scope="col">10</th>
+					    <th scope="col">11</th>
+					    <th scope="col">12</th>
+					    <th scope="col">13</th>
+					    <th scope="col">14</th>
+					    <th scope="col">15</th>
+					    <th scope="col">16</th>
+					    <th scope="col">17</th>
+					    <th scope="col">18</th>
+					    <th scope="col">19</th>
+					    <th scope="col">20</th>
+					    <th scope="col">21</th>
+					    <th scope="col">22</th>
+					    <th scope="col">23</th>
+					    <th scope="col">24</th>
+					    <th scope="col">25</th>
+					    <th scope="col">26</th>
+					    <th scope="col">27</th>
+					    <th scope="col">28</th>
+					    <th scope="col">29</th>
+					    <th scope="col">30</th>
+					    <th scope="col">31</th>					    
+						<th>(16)</th>
+						<th>(17)</th>
+						<th>(18)</th>
+					</tr>			 
+			 <tbody>
+				<tr ng-repeat="use in employeesResult">
+					 <td>{{use.empNo}}</td>		
+					 <td>{{use.empFName}}&nbsp;{{use.empLName}}</td>			
+					 <td>{{use.empDOJ}}</td>					 
+					 <td>{{use.age}}&{{use.empDOB}}</td>				 
+					 <td>{{use.empDesignation}}</td>					 					 
+					 <td>{{use.empRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>					 
+					 <td>{{use.day1hrs}}</td>
+					 <td>{{use.day2hrs}}</td>
+					<td>{{use.day3hrs}}</td>
+					<td>{{use.day4hrs}}</td>
+					<td>{{use.day5hrs}}</td>
+					<td>{{use.day6hrs}}</td>
+					<td>{{use.day7hrs}}</td>
+					<td>{{use.day8hrs}}</td>
+					<td>{{use.day9hrs}}</td>
+					<td>{{use.day10hrs}}</td>
+					<td>{{use.day11hrs}}</td>
+					<td>{{use.day12hrs}}</td>
+					<td>{{use.day13hrs}}</td>
+					<td>{{use.day14hrs}}</td>
+					<td>{{use.day15hrs}}</td>
+					<td>{{use.day16hrs}}</td>
+					<td>{{use.day17hrs}}</td>
+					<td>{{use.day18hrs}}</td>
+					<td>{{use.day19hrs}}</td>
+					<td>{{use.day20hrs}}</td>
+					<td>{{use.day21hrs}}</td>
+					<td>{{use.day22hrs}}</td>
+					<td>{{use.day23hrs}}</td>
+					<td>{{use.day24hrs}}</td>
+					<td>{{use.day25hrs}}</td>
+					<td>{{use.day26hrs}}</td>
+					<td>{{use.day27hrs}}</td>
+					<td>{{use.day28hrs}}</td>
+					<td>{{use.day29hrs}}</td>
+					<td>{{use.day30hrs}}</td>
+					<td>{{use.day31hrs}}</td>
+					<td>{{use.emplrRemarks}}</td>
+					<td>{{use.emplrRemarks}}</td>
+					<td>{{use.emplrRemarks}}</td>
+				</tr>				
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+<div>
+</div>	
+	
+	

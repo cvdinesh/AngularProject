@@ -1,0 +1,149 @@
+<div ng-controller="employee26detailsCtrl">
+<fieldset>
+<h1 align="center"><b>FORM NO. XXVII</b></h1>
+<h5 align="center">[See Rule 78(1)(a)] of Tamil Nadu contract Labour(Regulation and Abolition) Rules,1975</h5>
+<h2 align="center"><b>REGISTER OF WAGES</b></h2>
+<div>
+		 <div>
+			<table width="70%" cellpadding="2" cellspacing="2" border="2">				
+				<tr>
+				<td width="35%"><b>Name of the Establishment:</b> </td><td>{{employeesResult[0].principleEmployer}}</td><td width="20%"><b>Week/Fortnight/Month:</b></td><td>{{employeesResult[0].month}}</td><br/>
+				</tr>
+				<tr>						
+				<td width="35%"><b>Name of the Employer/Contractor with Address:</b></td><td>{{employeesResult[0].contractor}}</td><td width="10%"><b>Year:</b></td><td>{{employeesResult[0].year}}</td><br/>
+				</tr>																
+			</table>
+		 </div>
+		 <div>
+		 &nbsp;&nbsp;
+		 </div>
+			<table cellpadding="2" cellspacing="2" border="1">				
+					<col>
+	  				<colgroup span="3"></colgroup></col>	  				
+  						
+					<tr>
+					    <!-- <th>Sl No.</th>
+					    <th>Name of the Workman</th>
+					    <th>Age and Sex</th>
+						<th>Designation(Nature of Work)</th>
+						<th>Monthly rated</th>
+						<th>Wage Period-<br>Week/FN/Month</th>						 
+						<th>Total Number of days Worked <br>during the Week/FN/Month</th>
+						<th>Units of Work done/<br>Number of days worked</th>
+						<th>Daily Rate of Wages</th>
+						<th>Overtime rate</th>
+						<th colspan="31" style="text-decoration:underline;text-align:center">WAGES EARNED</th>												
+						<th>Gross Wages</th>
+						<th>Provident Fund</th>
+						<th>E.S.I</th>
+						<th>DEDUCTIONS</th>
+						<th>Signature with date<br> or thumb Impression/<br>Cheque No. and Date in case<br>of Payment through Bank/<br>Advice of the Bank to be appended</th>
+						<th>Total unpaid amounts accumulated</th> -->
+												<td rowspan="2"><b>Sl No.</b></td>
+					    <td rowspan="2"><b>Name of the Workman</b></td>
+					    <td rowspan="2"><b>Age and Sex</b></td>
+						<td rowspan="2"><b>Designation(Nature of Work)</b></td>
+						<td rowspan="2"><b>Monthly rated</b></td>
+						<td rowspan="2"><b>Wage Period-<br>Week/FN/Month</b></td>						 
+						<td rowspan="2"><b>Total Number of days Worked <br>during the Week/FN/Month</b></td>
+						<td rowspan="2"><b>Units of Work done/<br>Number of days worked</b></td>
+						<td rowspan="2"><b>Daily Rate of Wages</b></td>
+						<td rowspan="2"><b>Overtime rate</b></td>
+						<th colspan="5" style="text-align:center"><b>WAGES EARNED</th>												
+						<td rowspan="2"><b>Gross Wages</b></td>
+						<td rowspan="2"><b>Provident Fund</b></td>
+						<td rowspan="2"><b>E.S.I</b></td>
+						<th colspan="4" style="text-align:center"><b>DEDUCTIONS</th>
+						<td rowspan="2"><b>Signature with date<br> or thumb Impression/<br>Cheque No. and Date in case<br>of Payment through Bank/<br>Advice of the Bank to be appended</b></td>
+						<td rowspan="2"><b>Total unpaid amounts accumulated</b></td>
+					</tr>
+					<tr>
+					<th scope="col">Basic Wages</th>
+				    <th scope="col">Dearness allowance</th>
+				    <th scope="col">Other allowances/cash payment,nature to be specified</th>
+				    <th scope="col">Overtime earned</th>
+				    <th scope="col">Leave Wages Including cash in the lieu if kinds</th>					    
+				    <th scope="col">Other deductions(indicate nature)</th>
+				    <th scope="col">Fines(if any)</th>
+					<th scope="col">Total Deductions</th>
+					<th scope="col">Net Wages</th>
+					</tr>					
+					<tr>
+						<th>(1)</th>
+						<th>(2)</th>
+						<th>(3)</th>
+						<th>(4)</th>
+						<th>(5)</th>
+						<th>(6)</th>
+						<th>(7)</th>
+						<th>(8)</th>
+						<th>(9)</th>
+						<th>(10)</th>		    
+					    <th>(11)</th>
+					    <th>(12)</th>
+					    <th>(13)</th>
+					    <th>(14)</th>
+					    <th>(15)</th>
+						<th>(16)</th>
+						<th>(17)</th>
+						<th>(18)</th>
+						<th>(19)</th>
+						<th>(20)</th>
+						<th>(21)</th>
+						<th>(22)</th>
+						<th>(23)</th>
+						<th>(24)</th>						
+					</tr>			 
+			 <tbody>
+				<tr ng-repeat="use in employeesResult">
+					 <td>{{use.empNo}}</td>		
+					 <td>{{use.empFName}}&nbsp;{{use.empLName}}</td>			
+					 <td>{{use.age}}&{{use.empGender}}</td>				 
+					 <td>{{use.empDesignation}}</td>					 					 
+					 <td>{{use.basicSalary}}</td>
+					 <td>{{use.empDOR}}</td>
+					 <td>{{use.workdays}}</td>
+					 <td>{{use.empRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+					 <td>{{use.emplrRemarks}}</td>
+				</tr>				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</fieldset>
+<div>
+<div>
+&nbsp;
+</div>
+<div>
+<table  width="100%" cellpadding="2" cellspacing="2" border="0">
+	<tr align="center">
+	<td>Certified that the wages have been paid to all the workers employed for the month of <b>{{employeesResult[0].month}}-{{employeesResult[0].year}}</b>;<br>
+							for the week ending_______________/for the F.N.ending_____________on _______________.<br>
+	</td>
+	<tr>
+	<tr><td>&nbsp;&nbsp;<br></td></tr>
+	<tr align="right">
+	<td>___________________________________________________________<br>
+	<b>Signature of the Employer/Manager/Contractor/Authorised Person.</b></td>
+	<tr>
+</table>
+</div>
+</div>	
+	
+	

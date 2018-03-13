@@ -1,0 +1,65 @@
+<div ng-controller="employeedetailCtrl">
+<fieldset>
+<h2 align="center">Employee Details</h2>
+<h4 align="center">Chennai</h3>
+<div>
+	<div>
+			<hr>
+			<table cellpadding="2" cellspacing="2" border="1">
+				<thead>
+					<tr>
+					    <th>Employee No</th>
+					    <th>Name</th>
+					    <!-- <th>FirstName</th>
+						<th>LastName</th>-->
+						<th>DOB</th>						
+						<th>Gender</th>
+						<th>Age</th>
+						<th>Permanent Address</th>
+						<th>Local Address</th>
+						<th>Father's Name</th>
+						<th>DOJ</th>
+						<th>Designation</th> 
+						<th>BasicSalary</th>
+						<th>HRA</th>
+						<th>Conv. Allow</th>
+						<th>Medical Allow</th>
+						<th>Special Allow</th>
+						<th>Phone No</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="use in employeeResult">
+					 <td>{{use.empNo}}</td>					
+					 <td>{{use.empFName}}&nbsp;{{use.empLName}}</td>			
+					 <!-- <td>{{use.empFName}}</td>
+					 <td>{{use.empLName}}</td> -->
+					 <td>{{use.empDOB}}</td>					 
+					 <td>{{use.empGender}}</td>
+					 <td>{{use.age}}</td>
+					 <td>{{use.perAddr}}</td>
+					 <td>{{use.localAddr}}</td>
+					 <td>{{use.fatherName}}</td>
+					 <td>{{use.empDOJ}}</td>
+					 <td>{{use.empDesignation}}</td>
+					 <td>{{use.basicSalary}}</td>
+					 <td>{{use.empHRA}}</td>
+					 <td>{{use.convAllow}}</td>
+					 <td>{{use.medicalAllow}}</td>
+					 <td>{{use.specAllow}}</td>
+					 <td>{{use.phone}}</td>					 
+				</tr>				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</fieldset>
+<div>
+<table>
+<tr>
+<tr>
+</table>
+</div>	
+</div>
+	
+	

@@ -1,0 +1,169 @@
+<div ng-controller="vendordetailsCtrl">
+<fieldset>
+<div>
+		 <!-- <a href="javascript:generatePDF()">Download PDF</a> -->
+		 <input type="button" ng-click="generatePDF()" value="Download PDF"/><br/><br/></td>
+		 </div>
+<div id="htmlconvertpdf">
+<h2 align="center"><b style="background-color: pink">VENDOR MONTHLY COMPLAINCES FORMAT</b></h2>
+	 <div>
+		<table style="float: left; width:50%;" border="2">
+          <tr>
+		  <th bgcolor="orange">Name and Address of the vendor</th>
+		  <th bgcolor="lightgreen">Name of the Principle Employer & Address</th>
+		  </tr>
+		  <tr style="height: 68px">
+		  <th>{{vendorsResult[0].vendorName}} <br/>{{vendorsResult[0].vendorAddress}}</th>
+		  <th>{{vendorsResult[0].emplrName}} <br/>{{vendorsResult[0].emplrAddress}}</th>
+		</table>
+		<table style="display: inline-block;width:auto;" border="2">
+		        <tr>
+		          <td bgcolor="pink">Month</td>
+		          <td>{{vendorsResult[0].month}}</td>
+		        </tr> 
+		        <tr>
+		          <td></td>
+		        </tr>
+		        <tr>
+		          <td bgcolor="yellow">ESIC.Reg.No.</td>
+		          <td>{{vendorsResult[0].esicRegNo}}</td>
+		        </tr> 
+		        <tr>
+		          <td bgcolor="orange">EPF.Reg.No.</td>
+		          <td>{{vendorsResult[0].epfRegNo}}</td>
+		        </tr>
+		        <tr>
+		          <td></td>
+		        </tr> 
+		        <tr>
+		          <td bgcolor="pink">Professional Tax. Reg.No</td>
+		          <td>{{vendorsResult[0].profTaxRegNo}}</td>
+		        </tr>
+		</table>
+    </div>
+		 <div>
+		 &nbsp;&nbsp;
+		 </div>
+		 
+			<table cellpadding="2" cellspacing="2" border="1">
+				
+					<!-- <col>
+	  				<colgroup span="31"></colgroup> -->
+  						
+					<tr bgcolor="yellow">
+					    <th>SL No.</th>
+					    <th>Name of the employee</th>
+					    <th>Father's Name</th>									
+						<th>Employee's PF Number</th>
+						<th>Employee's ESI Number</th>
+						<th>No.of days worked during the month</th>
+						<th>Basic wage</th>
+						<th>DA</th>	
+						<th>HRA &Other Allowance</th> 					 
+						<th>Overtime Hour</th>																	
+						<th>Overtime wages</th>
+						<th>Gross</th>
+						<th>DeductionOf EPF</th>
+						<th>Deduction ESIC</th>	
+						<th>Deduction PT</th>
+						<th>Deduction LWF</th>
+						<th>NET Amount</th>	
+						<th>Overtime Hour</th>																	
+						<th>Overtime wages</th>
+						<th>Gross</th>
+						<th>DeductionOf EPF</th>
+						<th>Deduction ESIC</th>	
+						<th>Deduction PT</th>
+						<th>Deduction LWF</th>
+						<th>NET Amount</th>
+							<th>Gross</th>
+						<th>DeductionOf EPF</th>
+						<th>Deduction ESIC</th>	
+						<th>Deduction PT</th>
+						<th>Deduction LWF</th>
+						<th>NET Amount</th>
+							<th>Gross</th>
+						<th>DeductionOf EPF</th>
+						<th>Deduction ESIC</th>	
+						<th>Deduction PT</th>
+						<th>Deduction LWF</th>
+						<th>NET Amount</th>									 
+					</tr>
+					 
+			 <tbody>
+				<tr ng-repeat="vendor in vendorsResult">
+					 <td>{{vendor.slNo}}</td>		
+					 <td>{{vendor.fName}}&nbsp;{{vendor.lName}}</td>					 				 
+					 <td>{{vendor.fatherName}}</td>
+					 <td>{{vendor.empPFNum}}</td>
+					 <td>{{vendor.empESINum}}</td>
+					 <td>{{vendor.dayworked}}</td>
+					 <td>{{vendor.basicwage}}</td>					 
+					 <td>{{vendor.empDA}}</td>		
+					 <td>{{vendor.empHRA}}</td>
+					 <td>{{vendor.empOverTimeHrs}}</td>
+					 <td>{{vendor.empOverTimeWages}}</td>
+					 <td>{{vendor.empGross}}</td>					 
+					 <td>{{vendor.deductionOfEPF}}</td>					
+					 <td>{{vendor.deductionESIC}}</td>
+					 <td>{{vendor.deductionPT}}</td>
+					 <td>{{vendor.deductionLWF}}</td>
+					 <td>{{vendor.netAmount}}</td>
+					 <td>{{vendor.empOverTimeHrs}}</td>
+					 <td>{{vendor.empOverTimeWages}}</td>
+					 <td>{{vendor.empGross}}</td>					 
+					 <td>{{vendor.deductionOfEPF}}</td>					
+					 <td>{{vendor.deductionESIC}}</td>
+					 <td>{{vendor.deductionPT}}</td>
+					 <td>{{vendor.deductionLWF}}</td>
+					 <td>{{vendor.netAmount}}</td>
+					 <td>{{vendor.empGross}}</td>					 
+					 <td>{{vendor.deductionOfEPF}}</td>					
+					 <td>{{vendor.deductionESIC}}</td>
+					 <td>{{vendor.deductionPT}}</td>
+					 <td>{{vendor.deductionLWF}}</td>
+					 <td>{{vendor.netAmount}}</td>
+					 <td>{{vendor.empGross}}</td>					 
+					 <td>{{vendor.deductionOfEPF}}</td>					
+					 <td>{{vendor.deductionESIC}}</td>
+					 <td>{{vendor.deductionPT}}</td>
+					 <td>{{vendor.deductionLWF}}</td>
+					 <td>{{vendor.netAmount}}</td>
+				</tr>				
+				</tbody>
+			</table>
+			
+
+<div>
+&nbsp;
+</div>
+	<div>
+	<table width="130%" cellpadding="2" cellspacing="2" border="2">
+		<tr align="left">
+		<td>We hereby Certify that the above mentioned employees PF/ESIC has been remitted with the respective department against challan attached for the Month of <b>{{vendorsResult[0].month}}.</b><br>
+			We hereby affirm that we will be liable to pay any financial liabilities in case of such liabilities arise in future in regard to the documents submitted by us.<br>
+		</td>
+		</tr>
+		<tr><td>&nbsp;<br></td></tr>	
+	</table>
+	
+	<table  width="130%" cellpadding="2" cellspacing="2" border="2" style="padding: 0px 0px 0px 425px;">
+	   <tr align="center">
+		<td>For <b>{{vendorsResult[0].vendorName}}</b></td>
+		</tr>
+		<tr align="center">
+			<td><b>Name of the Person & Signature</b></td>
+		<tr>
+		<tr><td>&nbsp;<br></td></tr>
+		<tr align="center">
+			<td><b>Seal</b></td>
+		<tr>
+	</tr>
+	</table>
+	</div>
+		
+			
+</div>
+	</div>
+</fieldset>
+		
