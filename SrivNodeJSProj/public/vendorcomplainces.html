@@ -1,0 +1,122 @@
+<div ng-controller="vendordetailsCtrl">
+<!-- <div> -->
+	<fieldset>
+	<h2 align="center"><b style="background-color: pink">VENDOR MONTHLY COMPLAINCES FORMAT{{message}}</b></h2>
+	<div>
+		 <div>
+			<table style="float: left; width:50%;" border="2">
+	          <tr>
+			  <th bgcolor="orange">Name and Address of the vendor</th>
+			  <th bgcolor="lightgreen">Name of the Principle Employer & Address</th>
+			  </tr>
+			  <tr style="height: 68px">
+			  <th>{{vendorResults[0].VendorName}} {{message2}} <br/>{{vendorResults[0].VendorAddress}}</th>
+			  <th>{{vendorResults[0].EmplrName}} <br/>{{vendorResults[0].EmplrAddress}}</th>
+			</table>
+			<table style="display: inline-block;width:auto;" border="2">
+			        <tr>
+			          <td bgcolor="pink">Month</td>
+			          <td>{{vendorResults[0].Month}}</td>
+			        </tr> 
+			        <tr>
+			          <td></td>
+			        </tr>
+			        <tr>
+			          <td bgcolor="yellow">ESIC.Reg.No.</td>
+			          <td>{{vendorResults[0].EsicRegNo}}</td>
+			        </tr> 
+			        <tr>
+			          <td bgcolor="orange">EPF.Reg.No.</td>
+			          <td>{{vendorResults[0].EpfRegNo}}</td>
+			        </tr>
+			        <tr>
+			          <td></td>
+			        </tr> 
+			        <tr>
+			          <td bgcolor="pink">Professional Tax. Reg.No</td>
+			          <td>{{vendorResults[0].ProfTaxRegNo}}</td>
+			        </tr>
+			</table>
+	    </div>
+			 <div>
+			 &nbsp;&nbsp;
+			 </div>
+				<table cellpadding="2" cellspacing="2" border="1">
+					
+						<col>
+		  				<colgroup span="31"></colgroup>
+	  						
+						<tr bgcolor="yellow">
+						    <th>SL No.</th>
+						    <th>Name of the employee</th>
+						    <th>Father's Name</th>									
+							<th>Employee's PF Number</th>
+							<th>Employee's ESI Number</th>
+							<th>No.of days worked during the month</th>
+							<th>Basic wage</th>
+							<th>DA</th>	
+							<th>HRA &Other Allowance</th> 					 
+							<th>Overtime Hour</th>																	
+							<th>Overtime wages</th>
+							<th>Gross</th>
+							<th>DeductionOf EPF</th>
+							<th>Deduction ESIC</th>	
+							<th>Deduction PT</th>
+							<th>Deduction LWF</th>
+							<th>NET Amount</th>									 
+						</tr>
+						 
+				 <tbody>
+					<!-- <tr ng-repeat="vendor in vendorResults track by $index"> -->
+					<tr ng-repeat="vendor in vendorResults">
+						 <td>{{vendor.SLNo}}</td>		
+						 <td>{{vendor.FName}}&nbsp;{{vendor.LName}}</td>					 				 
+						 <td>{{vendor.FatherName}}</td>
+						 <td>{{vendor.PFNum}}</td>
+						 <td>{{vendor.ESINum}}</td>
+						 <td>{{vendor.Daysworked}}</td>
+						 <td>{{vendor.Basicwage}}</td>					 
+						 <td>{{vendor.EmpDA}}</td>		
+						 <td>{{vendor.EmpHRA}}</td>
+						 <td>{{vendor.EmpOverTimeHrs}}</td>
+						 <td>{{vendor.EmpOverTimeWages}}</td>
+						 <td>{{vendor.Gross}}</td>					 
+						 <td>{{vendor.DeductionEPF}}</td>					
+						 <td>{{vendor.DeductionESIC}}</td>
+						 <td>{{vendor.DeductionPT}}</td>
+						 <td>{{vendor.DeductionLWF}}</td>
+						 <td>{{vendor.NetAmount}}</td>
+					</tr>				
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</fieldset>
+	<div>
+	&nbsp;
+	</div>
+	<div>
+	<table width="100%" cellpadding="2" cellspacing="2" border="2">
+		<tr align="left">
+		<td>We hereby Certify that the above mentioned employees PF/ESIC has been remitted with the respective department against challan attached for the Month of <b>{{vendorResults[0].month}}.</b><br>
+			We hereby affirm that we will be liable to pay any financial liabilities in case of such liabilities arise in future in regard to the documents submitted by us.<br>
+		</td>
+		</tr>
+		<tr><td>&nbsp;<br></td></tr>	
+	</table>
+	
+	<table  width="100%" cellpadding="2" cellspacing="2" border="2" style="padding: 0px 0px 0px 425px;">
+	   <tr align="center">
+		<td>For <b>{{vendorResults[0].vendorName}}</b></td>
+		</tr>
+		<tr align="center">
+			<td><b>Name of the Person & Signature</b></td>
+		</tr>
+		<tr><td>&nbsp;<br></td></tr>
+		<tr align="center">
+			<td><b>Seal</b></td>
+		</tr>
+	</table>
+	</div>
+</div>		
+	

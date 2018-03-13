@@ -1,0 +1,21 @@
+{
+  "name": "SrivNodeJSProj",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "html": "^1.0.0",
+    "jade": "*",
+    "log4js": "^2.4.1",
+    "mongodb": "^3.0.4",
+    "mongoose": "^5.0.9",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "node-json-db": "^0.7.3",
+    "nodemon": "^1.14.7"
+  }
+}
