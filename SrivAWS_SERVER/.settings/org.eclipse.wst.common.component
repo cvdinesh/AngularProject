@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SrivAWS_SERVER">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="jersey-servlet-1.19.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-servlet-1.19.1/jersey-servlet-1.19.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-core-1.19.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-core-1.19.1/jersey-core-1.19.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jettison-1.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jettison-1.1/jettison-1.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr311-api-1.1.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jsr311-api-1.1.1/jsr311-api-1.1.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-json-1.19.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-json-1.19.1/jersey-json-1.19.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-server-1.19.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-server-1.19.1/jersey-server-1.19.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-5.1.34-bin.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/mysql-connector-java-5.1.34-bin/mysql-connector-java-5.1.34-bin">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-client-1.19.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-client-1.19.1/jersey-client-1.19.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/SrivAWS_SERVER/build/classes"/>
+        <property name="context-root" value="SrivAWS_SERVER"/>
+    </wb-module>
+</project-modules>
