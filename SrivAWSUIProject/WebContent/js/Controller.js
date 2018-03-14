@@ -134,7 +134,8 @@ myapp.controller('loginCtrl',function($scope, $location, $rootScope, $http){
         
 		var name = $scope.username;
 		var pass = $scope.password;
-		var baseurl ="http://localhost:8080/SrivAWS_SERVER/rest/";
+		var baseurl ="http://amazon-adbs-2514:8080/SrivAWS_SERVER/rest/"; //Added Amazon url
+		//var baseurl ="http://localhost:8080/SrivAWS_SERVER/rest/";
 					
 		$http({method:'GET', url:baseurl+'login/loggedinuser/'+name+'/'+pass}).then(function(response) {
 			console.log("Logged In Details ---",response.data);
