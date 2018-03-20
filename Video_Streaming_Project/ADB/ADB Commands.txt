@@ -7,6 +7,17 @@ adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
 2.To open amazon app from play store
 
 adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
+Here we are searching through amazon package name.
+
+search amazon app in playstore
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=amazon&c=apps
+
+search jio tv app in playstore
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=jiotv&c=apps
+
+search sun nxt app in playstore
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=sunnxt&c=apps
 
 3.To stop the app 
 
@@ -16,11 +27,24 @@ adb shell am force-stop com.example.admin.travel
 
 adb shell pm clear com.example.admin.travel
 
-5.adb shell input text "text"  --enter text
+Clear Amazon App Cache
+adb shell pm clear in.amazon.mShop.android.shopping
 
-6.adb shell input keyevent 3 -- comes to home button
+Clear NetFlix App Cache
+adb shell pm clear com.netflix.mediaclient
 
-7.adb shell input keyevent 4 -- back button functionality
+5.To enter Text in text boxes  
+
+adb shell input text "text"  
+
+6.To come to Home screen 
+
+adb shell input keyevent 3
+adb shell input keyevent KEYCODE_HOME
+
+7.To Go to back button 
+ adb shell input keyevent 4 
+ adb shell input keyevent KEYCODE_BACK
 
 8.adb shell getprop -- get the key value pairs of the all the properies of the device.
 
@@ -75,27 +99,14 @@ To get the IP Address of the andriod device connected --adb shell ip addr show w
 
 adb shell monkey -p in.amazon.mShop.android.shopping 500 > C:\Users\LalithaDinesh\Desktop\Setupbox-testing\amazon\Monkey-Logs.txt
 
-adb shell pm clear in.amazon.mShop.android.shopping
 
 adb shell monkey -p com.google.andriod.youtube 500 > C:\Users\LalithaDinesh\Desktop\Setupbox-testing\amazon\Monkey-Logs.txt
 
 
 adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.tv.v18.viola'
 
-com.tv.v18.viola/.views.activities.RSHomeActivity
-
-adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.tv.v18.viola'
-
 adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
 
-
-adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=amazon&c=apps
-
-adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=jiotv&c=apps
-
-adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=sun&c=apps
-
-adb shell pm clear com.netflix.mediaclient
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -125,7 +136,7 @@ adb shell am start -a android.intent.action.VIEW -d http://www.stackoverflow.com
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-You can also access the WindowManager through ADB:
+WindowManager through ADB:
 
 $ adb shell wm
 usage: wm [subcommand] [options]
