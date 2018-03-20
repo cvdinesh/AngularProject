@@ -35,6 +35,10 @@ adb shell pm clear com.netflix.mediaclient
 
 5.To enter Text in text boxes  
 
+usage: input [text|keyevent]
+input text 
+input keyevent
+
 adb shell input text "text"  
 
 6.To come to Home screen 
@@ -68,33 +72,32 @@ adb logcat > path of the file name where to store the logs.(logcat.txt)
 14.To log the events captured in the app neatly with different time.
 adb logcat -v long > logcat.txt
 
-usage: input [text|keyevent]
-input text 
-input keyevent
 
+15.you can only enter single words without space. To send a space, you’re going to need a KEYCODE_SPACE event. 
 
-adb shell input text Hello
+16.adb command to prevent andriod device to go sleep --$ adb shell svc power stayon true
 
-However, you can only enter single words without space. To send a space, you’re going to need a KEYCODE_SPACE event. To send an event
+17.To get the state of the device--adb get-state
 
-adb shell input text Hello && input keyevent 62 && input text World
+18.To get the product name -- adb shell getprop ro.product.name
+19.To get the product model -- adb shell getprop ro.product.model
+20.to get the product device -- adb shell getprop ro.product.device
+21.If more than one device connected  to get the particular device product model -- 
 
+adb -s 192.168.1.3:5555 shell getprop ro.product.model
 
-adb command to prevent andriod device to go sleep --$ adb shell svc power stayon true
+22.adb shell input keyevent KEYCODE_POWER  -- Power key
 
-to get the product name -- adb shell getprop ro.product.name
-to get the product model -- adb shell getprop ro.product.model
-to get the product device -- adb shell getprop ro.product.device
+23.adb shell input keyevent KEYCODE_WAKEUP  --Wakeup key. Wakes up the device.
 
-If more than one device connected  to get the particular device product model -- adb -s 192.168.1.3:5555 shell getprop ro.product.model
+24.To get the IP Address of the andriod device connected 
 
-to get the state of the device--adb get-state
+adb shell ip addr show wlan0  | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1
 
-adb shell input keyevent KEYCODE_POWER  -- Power key
+25.To Open Browser and go to stackoverflow.com
 
-adb shell input keyevent KEYCODE_WAKEUP  --Wakeup key. Wakes up the device.
+adb shell am start -a android.intent.action.VIEW -d http://www.stackoverflow.com
 
-To get the IP Address of the andriod device connected --adb shell ip addr show wlan0  | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 adb shell monkey -p in.amazon.mShop.android.shopping 500 > C:\Users\LalithaDinesh\Desktop\Setupbox-testing\amazon\Monkey-Logs.txt
@@ -128,13 +131,7 @@ From a web site: http://play.google.com/store/search?q=<search_query>&c=apps
 
 From an Android app: market://search?q=<seach_query>&c=apps
 
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-To Open Browser and go to stackoverflow.com
-
-adb shell am start -a android.intent.action.VIEW -d http://www.stackoverflow.com
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 WindowManager through ADB:
 
