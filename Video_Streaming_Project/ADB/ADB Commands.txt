@@ -1,0 +1,179 @@
+ADB commands 
+
+1.To find the app package and activity name 
+
+adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
+
+2.To open amazon app from play store
+
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
+
+3.To stop the app 
+
+adb shell am force-stop com.example.admin.travel 
+
+4.To clear cache of the app 
+
+adb shell pm clear com.example.admin.travel
+
+5.adb shell input text "text"  --enter text
+
+6.adb shell input keyevent 3 -- comes to home button
+
+7.adb shell input keyevent 4 -- back button functionality
+
+8.adb shell getprop -- get the key value pairs of the all the properies of the device.
+
+9.To open app in the device 
+adb shell monkey -p com.example.admin.travel -c android.intent.category.LAUNCHER 1
+
+10.To open Amazon app in the device 
+adb shell monkey -p in.amazon.mShop.android.shopping
+
+11.To display the list of packeges 
+adb shell pm list packages -l
+
+12.To list all the process running in andriod 
+adb shell ps 
+
+Logcat is a command-line tool that dumps a log of system messages, including stack traces when the device throws an error 
+and messages that you have written from your app with the Log class.
+
+13.To log the events captured in the app.
+adb logcat > path of the file name where to store the logs.(logcat.txt)
+14.To log the events captured in the app neatly with different time.
+adb logcat -v long > logcat.txt
+
+usage: input [text|keyevent]
+input text 
+input keyevent
+
+
+adb shell input text Hello
+
+However, you can only enter single words without space. To send a space, you’re going to need a KEYCODE_SPACE event. To send an event
+
+adb shell input text Hello && input keyevent 62 && input text World
+
+
+adb command to prevent andriod device to go sleep --$ adb shell svc power stayon true
+
+to get the product name -- adb shell getprop ro.product.name
+to get the product model -- adb shell getprop ro.product.model
+to get the product device -- adb shell getprop ro.product.device
+
+If more than one device connected  to get the particular device product model -- adb -s 192.168.1.3:5555 shell getprop ro.product.model
+
+to get the state of the device--adb get-state
+
+adb shell input keyevent KEYCODE_POWER  -- Power key
+
+adb shell input keyevent KEYCODE_WAKEUP  --Wakeup key. Wakes up the device.
+
+To get the IP Address of the andriod device connected --adb shell ip addr show wlan0  | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+adb shell monkey -p in.amazon.mShop.android.shopping 500 > C:\Users\LalithaDinesh\Desktop\Setupbox-testing\amazon\Monkey-Logs.txt
+
+adb shell pm clear in.amazon.mShop.android.shopping
+
+adb shell monkey -p com.google.andriod.youtube 500 > C:\Users\LalithaDinesh\Desktop\Setupbox-testing\amazon\Monkey-Logs.txt
+
+
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.tv.v18.viola'
+
+com.tv.v18.viola/.views.activities.RSHomeActivity
+
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.tv.v18.viola'
+
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
+
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=amazon&c=apps
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=jiotv&c=apps
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=sun&c=apps
+
+adb shell pm clear com.netflix.mediaclient
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Linking to a Applicaiton Page
+
+From a web site: http://play.google.com/store/apps/details?id=<package_name>
+
+From an Android app: market://details?id=<package_name>
+
+Linking to a Product List
+
+From a web site: http://play.google.com/store/search?q=pub:<publisher_name>
+
+From an Android app: market://search?q=pub:<publisher_name>
+
+Linking to a Search Result
+
+From a web site: http://play.google.com/store/search?q=<search_query>&c=apps
+
+From an Android app: market://search?q=<seach_query>&c=apps
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To Open Browser and go to stackoverflow.com
+
+adb shell am start -a android.intent.action.VIEW -d http://www.stackoverflow.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+You can also access the WindowManager through ADB:
+
+$ adb shell wm
+usage: wm [subcommand] [options]
+       wm size [reset|WxH]
+       wm density [reset|DENSITY]
+       wm overscan [reset|LEFT,TOP,RIGHT,BOTTOM]
+
+The following command will give you the density:
+
+$ adb shell wm density
+Physical density: 320
+
+For devices running on version 4.3 or above, it can be determined by using-
+
+adb shell wm size
+adb shell wm density
+
+
+display size and density for devices running on 4.2 or less
+
+adb shell dumpsys window | grep cur= |tr -s " " | cut -d " " -f 4|cut -d "=" -f 2
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+screenrecord
+
+$ adb shell screenrecord --help
+Usage: screenrecord [options] <filename>
+
+Android screenrecord v1.2.  Records the device's display to a .mp4 file.
+
+Options:
+--size WIDTHxHEIGHT
+    Set the video size, e.g. "1280x720".  Default is the device's main
+    display resolution (if supported), 1280x720 if not.  For best results,
+    use a size supported by the AVC encoder.
+--bit-rate RATE
+    Set the video bit rate, in bits per second.  Value may be specified as
+    bits or megabits, e.g. '4000000' is equivalent to '4M'.  Default 4Mbps.
+--bugreport
+    Add additional information, such as a timestamp overlay, that is helpful
+    in videos captured to illustrate bugs.
+--time-limit TIME
+    Set the maximum recording time, in seconds.  Default / maximum is 180.
+--verbose
+    Display interesting information on stdout.
+--help
+    Show this message.
+
+Recording continues until Ctrl-C is hit or the time limit is reached.
+
+
