@@ -55,6 +55,8 @@ adb shell input keyevent KEYCODE_HOME
 9.To open app in the device 
 adb shell monkey -p com.example.admin.travel -c android.intent.category.LAUNCHER 1
 
+adb shell monkey -p in.amazon.mShop.android.shopping -c android.intent.category.LAUNCHER 1
+
 10.To open Amazon app in the device 
 adb shell monkey -p in.amazon.mShop.android.shopping
 
