@@ -7,6 +7,8 @@ adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
 2.To open amazon app from play store
 
 adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
+
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.google.andriod.youtube'
 Here we are searching through amazon package name.
 
 search amazon app in playstore
@@ -18,6 +20,8 @@ adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store
 
 search sun nxt app in playstore
 adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=sunnxt&c=apps
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=youtube&c=apps
 
 3.To stop the app 
 
@@ -112,12 +116,22 @@ adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.tv.
 
 adb shell am start -a android.intent.action.VIEW -d 'market://details?id=in.amazon.mShop.android.shopping'
 
+adb shell am start -a android.intent.action.VIEW -d 'market://details?id=com.google.andriod.youtube'
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=youtube&c=apps
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/apps/details?id=com.google.andriod.youtube'
+
+To launch youtube through chrome browser
+adb shell am start -n com.android.chrome/com.google.android.apps.chrome.Main "https://youtu.be/CSULRDoF8-g"
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Linking to a Applicaiton Page
 
 From a web site: http://play.google.com/store/apps/details?id=<package_name>
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/apps/details?id=com.tv.v18.viola'
 
 From an Android app: market://details?id=<package_name>
 
@@ -130,6 +144,8 @@ From an Android app: market://search?q=pub:<publisher_name>
 Linking to a Search Result
 
 From a web site: http://play.google.com/store/search?q=<search_query>&c=apps
+
+adb shell am start -a android.intent.action.VIEW -d http://play.google.com/store/search?q=youtube&c=apps
 
 From an Android app: market://search?q=<seach_query>&c=apps
 
