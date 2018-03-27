@@ -75,6 +75,7 @@ and messages that you have written from your app with the Log class.
 
 13.To log the events captured in the app.
 adb logcat > path of the file name where to store the logs.(logcat.txt)
+
 14.To log the events captured in the app neatly with different time.
 adb logcat -v long > logcat.txt
 
@@ -103,6 +104,45 @@ adb shell ip addr show wlan0  | grep 'inet ' | cut -d' ' -f6|cut -d/ -f1
 25.To Open Browser and go to stackoverflow.com
 
 adb shell am start -a android.intent.action.VIEW -d http://www.stackoverflow.com
+
+
+24.To get Android version you can use:
+
+adb shell getprop ro.build.version.release 
+
+25.To get API level:
+
+adb shell getprop ro.build.version.sdk 
+
+26.You can see all available properties with this command:
+
+adb shell getprop
+
+27.syntax for checking ADB version of Android SDK is
+
+adb version
+
+28.From Linux Terminal:
+
+adb shell getprop | grep "model\|version.sdk\|manufacturer\|hardware\|platform\|revision\|serialno\|product.name\|brand"
+
+29.From Windows PowerShell:
+
+adb shell 
+getprop | grep -e 'model' -e 'version.sdk' -e 'manufacturer' -e 'hardware' -e 'platform' -e 'revision' -e 'serialno' -e 'product.name' -e 'brand'
+
+30.to find ARM processor version on android device?
+adb shell getprop | grep abi
+
+adb shell cat /proc/cpuinfo
+
+adb shell getprop ro.product.cpu.abilist
+
+adb shell getprop ro.product.cpu.abi
+
+
+32.Update APK from command line using ADB?
+adb install -r foo.apk
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
